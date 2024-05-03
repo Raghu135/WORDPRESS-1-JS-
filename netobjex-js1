@@ -1,0 +1,259 @@
+/* Add your JavaScript code here.
+
+If you are using the jQuery library, then don't forget to wrap your code inside jQuery.ready() as follows:
+
+jQuery(document).ready(function( $ ){
+    // Your code in here
+});
+
+--
+
+If you want to link a JavaScript file that resides on another server (similar to
+<script src="https://example.com/your-js-file.js"></script>), then please use
+the "Add HTML Code" page, as this is a HTML code that links a JavaScript file.
+
+End of comment */ 
+//  window.onload = function() {
+//         var nav = document.querySelector('.main-menu.sticky-header');
+//         nav.style.display = 'none';
+
+//         window.addEventListener('scroll', function() {
+//             nav.style.display = window.scrollY 100 'block' : 'none';
+//         });
+//     };\
+
+
+
+
+
+
+window.onload = function() {
+    var nav = document.querySelector('.header-one');//.main-menu.sticky-header
+    nav.style.display = 'none'; // Initially hide the navigation
+
+    window.addEventListener('scroll', function() {
+        nav.style.display = 'block'; // Always display the navigation when scrolling occurs
+    });
+};
+
+
+
+
+
+
+
+// // Find the element with the class "page-header"
+// var pageHeader = document.querySelector('.page-header');
+
+// // Check if the element exists
+// if (pageHeader) {
+//     // Hide the element by setting its display property to "none"
+//     pageHeader.style.display = 'none';
+//     // Or remove the element from the DOM entirely
+//     // pageHeader.remove();
+// }
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Get all anchor tags within the .topbar__social list
+    const socialLinks = document.querySelectorAll('.topbar__social i');
+
+    // Loop through each anchor tag
+    socialLinks.forEach(function(link) {
+        // Add target="_blank" attribute to open links in a new tab
+        link.setAttribute('target', '_blank');
+    });
+});
+
+
+
+
+
+
+
+
+// document.addEventListener("DOMContentLoaded", function() {
+//     // Create a new <a> tag
+//     const whatsappLink = document.createElement('a');
+    
+//     // Set attributes for the <a> tag
+//     whatsappLink.setAttribute('href', 'https://api.whatsapp.com/send?phone=919886093616');
+//     whatsappLink.setAttribute('target', '_blank');
+//     whatsappLink.setAttribute('id', 'whatsappLink');
+    
+//     // Get the sidebar__cta__icon element
+//     const whatsappIcon = document.querySelector('.sidebar__cta__icon');
+    
+//     // Insert the <a> tag just before the <i> tag
+//     whatsappIcon.parentNode.insertBefore(whatsappLink, whatsappIcon);
+// });
+
+
+
+
+    document.addEventListener("DOMContentLoaded", function() {
+    // Get the existing <i> tag
+    const whatsappIcon = document.querySelector('.sidebar__cta__icon');
+    
+    // Create a new <a> tag
+    const whatsappLink = document.createElement('a');
+    
+    // Set attributes for the <a> tag
+    whatsappLink.setAttribute('href', 'https://api.whatsapp.com/send?phone=919886093616');
+    whatsappLink.setAttribute('target', '_blank');
+    
+    // Append the <i> tag to the <a> tag
+    whatsappLink.appendChild(whatsappIcon.cloneNode(true));
+    
+    // Replace the existing <i> tag with the new <a> tag in the DOM
+    whatsappIcon.parentNode.replaceChild(whatsappLink, whatsappIcon);
+});
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var anchorTags = document.querySelectorAll('.service-five-card__title a');
+
+  anchorTags.forEach(function(anchorTag) {
+    anchorTag.setAttribute('target', '_self');
+  });
+});
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var sidebarCTAText = document.querySelector('.sidebar__cta__text a');
+
+  // Create the phone icon element
+  var phoneIcon = document.createElement('i');
+  phoneIcon.classList.add('fa', 'fas', 'fa-phone-alt');
+
+  // Append the phone icon before the anchor tag
+  sidebarCTAText.insertBefore(phoneIcon, sidebarCTAText.firstChild);
+});
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var subMenuItems = document.querySelectorAll('.sub-menu li a span');
+
+  subMenuItems.forEach(function(item, index) {
+    switch(index) {
+      case 0:
+        item.textContent = 'WEB3';
+        break;
+	  case 1:
+        item.textContent = 'CYBER SECURITY';
+        break;
+      case 2:
+        item.textContent = 'PRODUCT DEVELOPMENT';
+        break;
+    }
+  });
+});
+
+
+
+
+/*why net objex cards swap*/
+
+document.addEventListener("DOMContentLoaded", function() {
+    var container = document.querySelector('.service-carousel');
+    var productDevelopmentElement = container.querySelector('.service-card-three__title a');
+    if (productDevelopmentElement) {
+        productDevelopmentElement.textContent = "WEB 3";
+    }
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    var container = document.querySelector('.service-carousel');
+    var productDevelopmentElement = container.querySelector('.service-card-three__title a[href="https://webeaz.in/netobjex/service/product-devlopment/"]');
+    var web3Element = container.querySelector('.service-card-three__title a[href="https://webeaz.in/netobjex/service/web3/"]');
+    if (productDevelopmentElement && web3Element) {
+        productDevelopmentElement.textContent = "WEB 3";
+        web3Element.textContent = "Product Development";
+    }
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    var container = document.querySelector('.service-carousel');
+    var web3Element = container.querySelector('.service-card-three__title a[href="https://webeaz.in/netobjex/service/web3/"]');
+
+    if (web3Element) {
+     
+        web3Element.href = "https://webeaz.in/netobjex/service/product-devlopment/";
+       
+        web3Element.textContent = "Product Development";
+    }
+});
+
+ 
+
+document.addEventListener("DOMContentLoaded", function() {
+   
+    var container = document.querySelector('.service-carousel');
+
+ 
+    var productDevelopmentElement = container.querySelector('.service-card-three__title a[href="https://webeaz.in/netobjex/service/product-devlopment/"]');
+
+  
+    if (productDevelopmentElement) {
+       
+        productDevelopmentElement.href = "https://webeaz.in/netobjex/service/web3/";
+       
+        productDevelopmentElement.textContent = "WEB 3";
+    }
+});
+
+
+
+
+/*team ink as #*/
+
+    // Wait for the DOM content to be loaded
+    document.addEventListener("DOMContentLoaded", function() {
+        // Select all anchor tags within elements with class "team-card-one__title"
+        var anchorTags = document.querySelectorAll('.team-card-one__title a');
+
+        // Loop through each anchor tag
+        anchorTags.forEach(function(anchor) {
+            // Create a new <p> element
+            var paragraph = document.createElement('span');
+            
+            // Add classes to the new <p> element
+            paragraph.className = 'team-card-one__title';
+
+            // Copy the text content of the anchor tag to the new <p> element
+            paragraph.textContent = anchor.textContent;
+
+            // Get the parent element of the anchor tag
+            var parent = anchor.parentNode;
+
+            // Replace the anchor tag with the new <p> element
+            parent.replaceChild(paragraph, anchor);
+        });
+    });
+
+
+
+
+
+
+
+
+
+
+
+
